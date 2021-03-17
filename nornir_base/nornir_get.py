@@ -1,5 +1,7 @@
 from nornir.core.task import Task, Result
 from nornir_netmiko.tasks import netmiko_send_command
+
+
 def show_version(task: Task) -> Result:
 
     task.run(
@@ -11,7 +13,7 @@ def show_version(task: Task) -> Result:
     )
     return Result(
         host=task.host,
-        result="Example task finished!",
+        result="show version collected",
     )
 
 def show_interfaces(task: Task) -> Result:
@@ -26,5 +28,5 @@ def show_interfaces(task: Task) -> Result:
 
     return Result(
         host=task.host,
-        result="Example task finished!",
+        result="show interfaces collected",
     )
